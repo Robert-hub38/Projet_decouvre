@@ -1,0 +1,3 @@
+* * * * * /usr/bin/python3 /home/robert.rodriguez@Digital-Grenoble.local/Documents/files_names/script.py >> /home/robert.rodriguez@Digital-Grenoble.local/Documents/files_names/files_names.log 2>&1
+
+

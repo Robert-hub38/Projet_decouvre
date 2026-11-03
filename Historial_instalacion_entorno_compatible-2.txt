@@ -1,0 +1,684 @@
+    1  ls
+    2  cd Téléchargements/
+    3  ls
+    4  ls arborescence-20261026T101202Z-1-001.zip 
+    5  unzip -l arborescence-20261026T101202Z-1-001.zip 
+    6  ls
+    7  cp arborescence-20261026T101202Z-1-001.zip ../Documents/
+    8  ls
+    9  cd ../Documents/
+   10  ls
+   11  unzip arborescence-20261026T101202Z-1-001.zip 
+   12  ls
+   13  cd arborescence/
+   14  cd ../
+   15  ls
+   16  ls arborescence
+   17  ls arborescence .jpeg
+   18  cd arborescence/
+   19  ls
+   20  ls .jpeg
+   21  ls -d
+   22  ls
+   23  ls-d
+   24  ls -d */
+   25  ls -F | grep /
+   26  ls | grep .jpeg
+   27  ls -A
+   28  ls -R
+   29  ls -R tree
+   30  tree
+   31  ls -S
+   32  ls -la
+   33  find ; -maxdeph sortie-309 -type d
+   34  mkdir -p -m 777 NewFolder/excercice1
+   35  ls
+   36  ls -la NewFolder/excercice1/
+   37  ls -la NewFolder/
+   38  ls -lt NewFolder/
+   39  ls -lt NewFolder/excercice1/
+   40  ls -la
+   41  ls -la
+   42  mv *.jpeg imagenes/
+   43  ls
+   44  ls -la
+   45  mv -n *.jpeg imagenes/
+   46  mv -n .jpeg imagenes/
+   47  ls -la
+   48  xdg-open imagenes/
+   49  xdg-open imagenes
+   50  xdg-open 
+   51  xdg-open .
+   52  ls -la
+   53  convert *.png *.jpeg
+   54  imagemagick
+   55  convert *.png *.jpeg
+   56  ls -la
+   57  tldr convert
+   58  tldr magick convert
+   59  mogrify -format jpg *.png
+   60  ls
+   61  ls -la
+   62  rm 
+   63  rm '*-0.jpeg', '*-1.jpeg','*-2.jpeg'
+   64  rm *-0.jpeg
+   65  tldr rm
+   66  ls -la
+   67  rm "./*-1.jpeg"
+   68  ls -la
+   69  rm "./*-2.jpeg"
+   70  ls -la
+   71  mv -n *.jpeg /imagenes
+   72  mv -n *.jpg /imagenes
+   73  mv  *.jpg /imagenes
+   74  ls -la
+   75  mv -v *.jpg imagenes
+   76  mv --help 
+   77  mv -v *.jpg /imagenes
+   78  ls -la
+   79  rm "./*-0.jpeg"
+   80  ls -la
+   81  rm -0.jpg
+   82  rm ./-0.jpg
+   83  ls -la
+   84  mv -n *.jpg /imagenes
+   85  cd imagenes/
+   86  ls
+   87  ls -la
+   88  cd ../
+   89  mv *.jpg imagenes/
+   90  ls -la
+   91  mogrify -format jpg -0.png
+   92  ls -la
+   93  mv -0.jpg imagenes/
+   94  mv "-0.jpg" imagenes/
+   95  mv '-0.jpg' imagenes/
+   96  mv -- -0.jpg
+   97  mv -- -0.jpg imagenes/
+   98  ls -la imagenes/
+   99  ls -la
+  100  mkdir -p -m 777 new_PDFs
+  101  cd PDFs/
+  102  ls -la
+  103  cp *.pdf ../NewFolder/
+  104  ls -la ../NewFolder/
+  105  cd ../
+  106  ls -la
+  107  cd New_PDFs
+  108  cd New_PDFs/
+  109  cd new_PDFs/
+  110  ls-la
+  111  ls -la
+  112  ls
+  113  cd ../
+  114  ls -la
+  115  ls -la PDFs/
+  116  pdftk linux-commands-handbook.pdf linux-tutorial.pdf linux_vi_f77.pdf output CONCAT.pdf
+  117  pdftk PDFs/ linux-commands-handbook.pdf linux-tutorial.pdf linux_vi_f77.pdf output CONCAT.pdf
+  118  cd PDFs/
+  119  ls
+  120  pdftk linux-commands-handbook.pdf linux-tutorial.pdf linux_vi_f77.pdf output CONCAT.pdf
+  121  ls
+  122  CONCAT.pdf
+  123  xdg-open CONCAT.pdf 
+  124  evince CONCAT.pdf 
+  125  xdg-open CONCAT.pdf 
+  126  pdftk CONCAT.pdf cat 1-10 output 1-10pages.pdf
+  127  ls
+  128  ls -la ../new_PDFs/
+  129  cp 1-10pages.pdf CONCAT.pdf linux-commands-handbook.pdf linux-tutorial.pdf linux_vi_f77.pdf ../new_PDFs/
+  130  ls -la ../new_PDFs/
+  131  cd ../
+  132  ls
+  133  cd new_PDFs/
+  134  ls 
+  135  mkdir -p -m 777 pdf_image
+  136  ls -la pdf_image/
+  137  mogrify -format jpg *.png
+  138  mogrify 
+  139  mogrify -format jpg *.ppm
+  140  ogrify -format jpg *.*
+  141  mogrify -format jpg *.*
+  142  ls -la
+  143  ls
+  144  rm "./*.jpg"
+  145  rm .jpg
+  146  rm *.jpg
+  147  ls
+  148  cd pdf_image/
+  149  ls
+  150  mogrify -format jpg *.ppm
+  151  ls
+  152  mogrify -format jpg *.pbm
+  153  ls
+  154  rm *.ppm
+  155  rm -- *.ppm
+  156  ls
+  157  rm -- *.pbm
+  158  ls
+  159  cd ../../
+  160  ls -la
+  161  ls -l | wc -l
+  162  nm-applet
+  163  hostname -I
+  164  ip a
+  165  python --version
+  166  python 
+  167  cd ../
+  168  python --version
+  169  python3 --version
+  170  cd Documents/arborescence/
+  171  python3 
+  172  python3 -m http.server
+  173  ls
+  174  cd ../
+  175  ls
+  176  mkdir -p -m 777 DPF_new
+  177  ls
+  178  unzip -l arborescence-20261026T101202Z-1-001.zip DPF_new/
+  179  ls DPF_new/
+  180  unzip -l arborescence-20261026T101202Z-1-001.zip DPF_new/
+  181  unzip -l arborescence-20261026T101202Z-1-001.zip 
+  182  ls
+  183  cd arborescence/
+  184  ls -la
+  185  cd PDFs/
+  186  ls
+  187  rm CONCAT.pdf 
+  188  ls
+  189  ls
+  190  ls
+  191  mkdir -p -m 777 pdf_image2
+  192  ls
+  193  pdfimages -png linux-commands-handbook.pdf pdf_image2/
+  194  ls
+  195  ls pdf_image2/
+  196  mogrify -format jpg *.png
+  197  cd pdf_image2/
+  198  mogrify -format jpg *.png
+  199  ls 
+  200  rm -- *.png 
+  201  ls
+  202  cd ../
+  203  ls
+  204  rm cancat.pdf 
+  205  ls
+  206  pdftk linux-commands-handbook.pdf linux-tutorial.pdf linux_vi_f77.pdf cat output cancat.pdf
+  207  ls
+  208  pdftk cancat.pdf cat 1-10 output 1-10pages.pdf
+  209  ls
+  210  cd pdf_image
+  211  ls
+  212  cd ../
+  213  cd pdf_image2/
+  214  ls
+  215  rm -- *.jpg
+  216  ls
+  217  cd ../
+  218  ls
+  219  pdfimages -png linux-commands-handbook.pdf pdf_image2/
+  220  pdfimages -png cantat.pdf pdf_image2/
+  221  ls
+  222  pdfimages -png cancat.pdf pdf_image2/
+  223  cd pdf_image2/
+  224  ls
+  225  mogrify -format jpg *.png
+  226  ls
+  227  history > ejercicio.txt
+  228  ls
+  229  mv ejercicio.txt cd ../../../
+  230  mv ejercicio.txt  ../../../
+  231  exit
+  232  ls 
+  233  cd ../
+  234  ls
+  235  cd Documents/
+  236  cd ../
+  237  ls 
+  238  sudo apt update 
+  239  cd Téléchargements/
+  240  ls -lt | head -n 
+  241  ls -lt | head -n 6
+  242  history > listar5archivos.txt
+  243  exit
+  244  cd Documents/arborescence/
+  245  ls
+  246  rsync --version
+  247  rsync backup/
+  248  ls
+  249  rsync PDFs/ backup/
+  250  ls PDFs/
+  251  rm PDFs/2.2ls-l.png 
+  252  ls
+  253  ls PDFs/
+  254  ls backup/
+  255  cd backup/
+  256  ls
+  257  cp 2.2ls-l.png ../PDFs/
+  258  ls 
+  259  cd ../
+  260  ls
+  261  cd PDFs/
+  262  ls 
+  263  ls
+  264  ls ../backup/
+  265  cd ../
+  266  cd rsync --delete-after PDFs/ backup/ 
+  267  cd rsync --delete PDFs/ backup/ 
+  268  cd rsync  PDFs/ backup/ --delete
+  269  cd rsync -r  PDFs/ backup/ 
+  270  rsync --delete  PDFs/ backup/ 
+  271  rsync --delete-after  PDFs/ backup/ 
+  272  rsync --delete  PDFs/ backup/ 
+  273  rsync -r  PDFs/ backup/ 
+  274  ls backup/
+  275  ls PDFs/
+  276  cd backup/
+  277  ls
+  278  *
+  279  ls
+  280  cd ../
+  281  rsync -a -r PDFs/ backup/
+  282  ls backup/
+  283  cd ../
+  284  mkdir -p -m 777 files_names
+  285  ls
+  286  renomme.py
+  287  nano renomme.py
+  288  ls
+  289  history > respaldarArchivos.txt
+  290  exit
+  291  whitch tree
+  292  which tree
+  293  sudo apt install tldr
+  294  sudo apt-get install tldr
+  295  which tldr
+  296  which node.js
+  297  node -v
+  298  node --version
+  299  sudo snap install tldr
+  300  which tldr
+  301  tldr --version
+  302  $tldr -u
+  303  tldr mkdir
+  304  tldr tldr
+  305  tldr --update
+  306  tldr mkdir
+  307  apt list --installed | grep imagemagick
+  308  apt-get  list --installed | grep imagemagick
+  309  convert --version
+  310  sudo apt install imagemagick
+  311  sudo apt autoremove nvidia-firmware-595-595.91.07
+  312  convert --version
+  313  apt install pd
+  314  apt install pdftk 
+  315  sudo apt install pdftk 
+  316  pdftk --version
+  317  ls -la
+  318  mkdir -p ~/.config/environment.d
+  319  echo "GSK_RENDERER=ngl" >> ~/.config/environment.d/gsk.conf
+  320  sudo apt install popper-utils 
+  321  ls
+  322  sudo apt update 
+  323  sudo apt install -y popper-utils
+  324  pdfinfo -v
+  325  exit
+  326  update help
+  327  sudo su
+  328  exit
+  329  sudo apt install ./<file>.deb
+  330  ls
+  331  cd Téléchargements/
+  332  ls
+  333  sudo apt install ./<file>.deb
+  334  sudo su
+  335  exit
+  336  cd /home
+  337  ls
+  338  cd user/
+  339  ls
+  340  exit
+  341  ls
+  342  cd Documents/
+  343  ls
+  344  cd files_names/
+  345  ls
+  346  python3
+  347  cla
+  348  cls
+  349   * * * * * /usr/bin/python3 /home/amal.belhi@Digital-Grenoble.local/Téléchargements/Arborescence/files_names/script.py >> /home/amal.belhi@Digital-Grenoble.local/Téléchargements/Arborescence/files_names/files_names.log 2>&1
+  350  exit
+  351  ls
+  352  cd Documents/
+  353  ls
+  354  cd ejercicio/
+  355  ls
+  356  cd 001
+  357  ls
+  358  clear
+  359  ls
+  360  cd ../
+  361  ls
+  362  exit
+  363  cd home
+  364  cd home/
+  365  cd ../../
+  366  ls
+  367  cd home/
+  368  cd ../
+  369  ls
+  370  cd robert.rodriguez@Digital-Grenoble.local/Documents/files_names/
+  371  * * * * * /usr/bin/python3 /home/robert.rodriguez@Digital-Grenoble.local/Documents/files_names/script.py >> /home/robert.rodriguez@Digital-Grenoble.local/Documents/files_names/files_names.log 2>&1
+  372  ls
+  373  crontab -e
+  374  ls
+  375  crontab -l
+  376  ls
+  377  cls
+  378  clear
+  379  cd ../../Téléchargements/
+  380  ls
+  381  cp WDGAS-20261027.zip ../Documents/WDGAS/
+  382  mkdir -m 777 WDGAS
+  383  ls
+  384  rm WDGAS
+  385  rm -d WDGAS
+  386  ls
+  387  cd ../Documents/
+  388  mkdir -m 777 WDGS
+  389  ls
+  390  cp ../Téléchargements/WDGAS-20261027.zip ../Documents/WDGS/
+  391  ls
+  392  ls WDGS/
+  393  cd WDGS/
+  394  ls
+  395  unzip WDGAS-20261027.zip 
+  396  ls
+  397  unzip WDGAS_employee.zip 
+  398  ls
+  399  clear
+  400  ls
+  401  ls -la WDGAS
+  402  clear
+  403  cd ../
+  404  ls
+  405  cd WDGS/
+  406  ls
+  407  rm -d WDGAS
+  408  rm -- WDGAS
+  409  rm -rf WDGAS
+  410  mkdir -m 777 employees_WDGAS
+  411  ls 
+  412  unzip WDGAS-20261027.zip employees_WDGAS/
+  413  ls employees_WDGAS/
+  414  cd employees_WDGAS/
+  415  ls
+  416  unzip WDGAS-20261027.zip -d employees_WDGAS/
+  417  ls
+  418  unzip WDGAS-20261027.zip -d employees_WDGAS/
+  419  cd ../
+  420  ls
+  421  unzip WDGAS-20261027.zip -d employees_WDGAS/
+  422  ls
+  423  cd employees_WDGAS/
+  424  ls
+  425  unzip WDGAS-20261027.zip 
+  426  ls
+  427  unzip WDGAS_employee.zip 
+  428  clear
+  429  ls
+  430  cd WDGAS/
+  431  ls
+  432  cd ../
+  433  ls
+  434  chmod +x ordenar_archivos.py 
+  435  ls
+  436  ./ordenar_archivos.py /home/robert.rodriguez@Digital-Grenoble.local/Documents/WDGS/employees_WDGAS/WDGAS
+  437  clear
+  438  chmod +x ordenar_archivos.py 
+  439  ls
+  440  rm -rf WDGAS/
+  441  ls 
+  442  ls 
+  443  rm -rf employees_WDGAS/
+  444  ls
+  445  mkdir -m 777 WDGS
+  446  ls 
+  447  unzip WDGAS_employee.zip -d WDGS/
+  448  ls
+  449  ls WDGS/
+  450  cd WDGS/
+  451  ls
+  452  cd ../
+  453  ls
+  454  cd ../../../
+  455  cd ../
+  456  ls
+  457  cd Documents/
+  458  ls
+  459  cd WDGS/
+  460  ls
+  461  cd employees_WDGAS/
+  462  ls
+  463  ./ordenar_archivos.py /home/robert.rodriguez@Digital-Grenoble.local/Documents/WDGS/employees_WDGAS/WDGAS
+  464  chmod +x ordenar_archivos.py 
+  465  ./ordenar_archivos.py /home/robert.rodriguez@Digital-Grenoble.local/Documents/WDGS/employees_WDGAS/WDGAS
+  466  exit
+  467  cd WDGAS/
+  468  ls
+  469  clear
+  470  ls
+  471  ls -d
+  472  ls -D
+  473  clear
+  474  ls -la
+  475  clear
+  476  ls ls -l | grep '^d'
+  477  ls -d */
+  478  ls BU/
+  479  clear
+  480  cd ../
+  481  ls
+  482  nano montrieur.sh
+  483  LS
+  484  ls
+  485  chmod +x montrieur.sh 
+  486  ./montrieur.sh /home/robert.rodriguez@Digital-Grenoble.local/Documents/WDGS/employees_WDGAS/WDGAS1/
+  487  ls
+  488  cd WDGAS
+  489  cd ../
+  490  cd WDGAS1
+  491  ls
+  492  ./montrieur.sh /home/robert.rodriguez@Digital-Grenoble.local/Documents/WDGS/employees_WDGAS/WDGAS1/WDGAS/
+  493  cd WDGAS/
+  494  ls
+  495  cd ../
+  496  ls
+  497  cd ../
+  498  ls
+  499  sh montrieur.sh /home/robert.rodriguez@Digital-Grenoble.local/Documents/WDGS/employees_WDGAS/WDGAS1/WDGAS
+  500  ls
+  501  nano montrieur.sh 
+  502  ls
+  503  chmod +x montrieur.sh 
+  504  sh montrieur.sh /home/robert.rodriguez@Digital-Grenoble.local/Documents/WDGS/employees_WDGAS/WDGAS1/WDGAS
+  505  exit
+  506  cd ../../../
+  507  ls
+  508  cd Documents/
+  509  mkdir -m 777 EntreeSorties
+  510  ls
+  511  cd EntreeSorties/
+  512  ls
+  513  ls ../../Téléchargements/
+  514  cp ../../Téléchargements/en.txt.gz ../../Documents/EntreeSorties/
+  515  ls
+  516  ls en.txt.gz 
+  517  gzip -dk en.txt.gz 
+  518  ls
+  519  gzip -dk en.txt.gz 
+  520  LS
+  521  ls
+  522  gzip -dk fr.txt.gz 
+  523  ls
+  524  cat en.txt | wc -l > param-en && cat en.txt | wc -w >> param-en && cat en.txt | wc -c >> param-en
+  525  ls
+  526  ls para
+  527  ls param-en 
+  528  cat param-en 
+  529  param-en 
+  530  cat fr.txt | wc -l > param-fr && cat fr.txt | wc -w >> param-fr && cat fr.txt | wc -c >> param-fr
+  531  ls
+  532  cat param-fr 
+  533  nano commandes_pour_etapes.txt
+  534  ls
+  535  cat commandes_pour_etapes.txt 
+  536  clear
+  537  cat > comando-param.txt << 'EOF'
+  538  # Comando utilizado para recrear el archivo param-en
+  539  # Uso: cat en.txt | wc -l >> param-en
+  540  #      cat en.txt | wc -w >> param-en
+  541  #      cat en.txt | wc -c >> param-en
+  542  #
+  543  # Versión en una sola línea:
+  544  cat en.txt | wc -l > param-en && \
+  545  cat en.txt | wc -w >> param-en && \
+  546  cat en.txt | wc -c >> param-en
+  547  EOF
+  548  ls
+  549  cat comamdo-param.txt
+  550  cat comando-param.txt
+  551  cat > comando-param-fr.txt << 'EOF'
+  552  # Comando utilizado para recrear el archivo param-fr
+  553  # Uso: cat fr.txt | wc -l >> param-fr
+  554  #      cat fr.txt | wc -w >> param-fr
+  555  #      cat fr.txt | wc -c >> param-fr
+  556  #
+  557  # Versión en una sola línea:
+  558  cat fr.txt | wc -l > param-fr && \
+  559  cat fr.txt | wc -w >> param-fr && \
+  560  cat fr.txt | wc -c >> param-fr
+  561  EOF
+  562  ls
+  563  clear
+  564  ls
+  565  cat fr.txt | sed -e 's/[[:punct:]]//g' -e 's/[0-9]//g' -e 's/./\L&/g' | grep -v '^$' > preproc_fr.txt
+  566  ls
+  567  cat en.txt | sed -e 's/[[:punct:]]//g' -e 's/[0-9]//g' -e 's/./\L&/g' | grep -v '^$' > preproc_en.txt
+  568  ls
+  569  cat preproc_fr.txt | sed 's/ /\n/g' | grep -v '^$' | sort | uniq -c | sort -n > index_fr
+  570  cat preproc_en.txt | sed 's/ /\n/g' | grep -v '^$' | sort | uniq -c | sort -n > index_en
+  571  ls
+  572  tail -n 30 index_fr | sort -nr > top_30_fr
+  573  tail -n 30 index_en | sort -nr > top_30_en
+  574  head -n 30 index_fr > last_30_fr
+  575  head -n 30 index_en > last_30_en
+  576  ls
+  577  cat last_30_en 
+  578  cat top_30_fr
+  579  clear
+  580  nano commandes_pour_etapes_4-2.txt
+  581  ls
+  582  cat commandes_pour_etapes_4-2.txt 
+  583  ls
+  584  cd ../
+  585  ls
+  586  cd WDGS/
+  587  ls
+  588  employees_WDGAS/
+  589  ls
+  590  cd employees_WDGAS/
+  591  ls
+  592  mkdir -m 777 WDGS
+  593  ls
+  594  unzip WDGAS_employee.zip -d WDGS/ 
+  595  ls
+  596  sh montrieur.sh /home/robert.rodriguez@Digital-Grenoble.local/Documents/WDGS/employees_WDGAS/WDGAS1/WDGAS
+  597  sh montrieur.sh /home/robert.rodriguez@Digital-Grenoble.local/Documents/WDGS/employees_WDGAS/WDGAS/WDGAS
+  598  ls
+  599  sh montrieur.sh /home/robert.rodriguez@Digital-Grenoble.local/Documents/WDGS/employees_WDGAS/WDGAS
+  600  sh montrieur.sh /home/robert.rodriguez@Digital-Grenoble.local/Documents/WDGS/employees_WDGAS/WDGS/
+  601  sh montrieur.sh /home/robert.rodriguez@Digital-Grenoble.local/Documents/WDGS/employees_WDGAS/WDGS/WDGAS
+  602  exit
+  603  cat commandes_pour_etapes.txt 
+  604  exit
+  605  cd ../
+  606  ls
+  607  cd ../
+  608  ls
+  609  cd EntreeSorties/
+  610  ls
+  611  cat commandes_pour_etapes_4-2.txt 
+  612  cat fr.txt | sed -e 's/[[:punct:]]//g' -e 's/[0-9]//g' -e 's/./\L&/g' | grep -v '^$' > preproc_fr.txt
+  613  cat preproc_fr.txt 
+  614  clear
+  615  cat commandes_pour_etapes_4-2.txt 
+  616  cat preproc_fr.txt | sed 's/ /\n/g' | grep -v '^$' | sort | uniq -c | sort -n > index_fr
+  617  cat index_fr 
+  618  clear
+  619  cat commandes_pour_etapes_4-2.txt 
+  620  tail -n 30 index_fr | sort -nr > top_30_fr
+  621  cat top_30_fr 
+  622  head -n 30 index_fr > last_30_fr
+  623  cat last_30_fr 
+  624  nano commandes_pour_etapes_4-2.txt 
+  625  cat commandes_pour_etapes_4-2.txt 
+  626  cd ../
+  627  ls
+  628  WDGS/
+  629  ls
+  630  cd WDGS/
+  631  ls
+  632  cd employees_WDGAS/
+  633  ls
+  634  cat montrieur.sh 
+  635  exit
+  636  sudo su conda install anaconda::python
+  637  sudo su
+  638  wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda.sh
+  639  bash ~/miniconda.sh
+  640  conda --version
+  641  source ~/.bashrc
+  642  exit
+  643  source ~/.bashrc
+  644  nano ~/.bashrc
+  645  conda --version
+  646  conda
+  647  exit
+  648  git --version
+  649  add-apt-repository ppa:git-core/ppa
+  650  sudo add-apt-repository ppa:git-core/ppa
+  651  sudo apt update
+  652  apt install git
+  653  sudo apt install git
+  654  git --version
+  655  git config --global alias.st status
+  656  git st
+  657  git config --global alias.co checkout
+  658  git config --global alias.br branche
+  659  git config --global alias.ci commit
+  660  git config --global alias.lg "log --oneline --graph --all --decorate"
+  661  nano ~/.gitconfig
+  662  git st
+  663  git log
+  664  exit
+  665  apt update
+  666  sudo apt update
+  667  sudo apt install openssh-server -y
+  668  sudo systemctl enable ssh --now
+  669  sudo ufw allow ssh
+  670  conda install -n base ipykernel --update-deps --force-reinstall
+  671  conda activate base
+  672  conda info --envs
+  673  conda install -n base ipykernel --update-deps --force-reinstall
+  674  python -m ipykernel install --user --name base --display-name "Python (base)"
+  675  conda create -n data_science python=3.12 -y
+  676  conda activate data_science
+  677  conda install -c conda-forge numpy pandas matplotlib seaborn scipy scikit-learn jupyterlab ipykernel -y
+  678  history > Historial_instalacion_entorno_compatible.txt
+  679  python -m ipykernel install --user --name data_science --display-name "Python 3.12 (Data Science)"
+  680  conda env list
+  681  python --version
+  682  python -c "import numpy, pandas, matplotlib, seaborn, scipy, sklearn, ipykernel; print('Todo funciona correctamente')"
+  683  
+  684  history > Historial_instalacion_entorno_compatible-2.txt

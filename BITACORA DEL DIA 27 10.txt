@@ -1,0 +1,177 @@
+BITACORA DEL DIA 27/10/26
+
+rm -d WDGAS
+
+mkdir -m 777 WDGS
+
+cp ../Téléchargements/WDGAS-20261027.zip ../Documents/WDGS/
+
+unzip nombre_del_archivo.zip -d /ruta/de/destino 
+
+### Eliminar carpetas no vacias
+rm -rf WDGAS
+
+###############################
+## TRABAJO CON LOS ARCHIVOS DE DATA
+#
+1. CREAR SCRIPT PYTHON
+
+DAR PERMISOS DE EJECUCION
+chmod +x ordenar_archivos.py
+
+#ejecutar archivos
+./ordenar_archivos.py /home/robert.rodriguez@Digital-Grenoble.local/Documents/WDGS/employees_WDGAS/WDGAS
+
+
+### PARA BASH
+# nano mostrieur.sh
+Guarda el archivo con Ctrl + O, pulsa Enter y sal con Ctrl + X.
+
+### ejecutarlo
+h montrieur.sh /home/robert.rodriguez@Digital-Grenoble.local/Documents/WDGS/employees_WDGAS/WDGAS1/WDGAS
+
+### SCRIPT BASH #####
+#!/bin/sh
+
+# Departamentos disponibles
+DEPARTAMENTOS="BU HR IT"
+
+# Comprobar que se ha proporcionado una carpeta
+if [ "$#" -ne 1 ]; then
+    echo "Uso: $0 /ruta/a/la/carpeta"
+    exit 1
+fi
+
+ORIGEN=$1
+
+# Comprobar que la carpeta existe
+if [ ! -d "$ORIGEN" ]; then
+    echo "ERROR: La carpeta no existe: $ORIGEN"
+    exit 1
+fi
+
+# Obtener la ruta absoluta de la carpeta
+ORIGEN=$(cd "$ORIGEN" && pwd) || exit 1
+
+PROCESADOS=0
+OMITIDOS=0
+
+echo ""
+echo "INICIANDO ORGANIZACION DE ARCHIVOS"
+echo ""
+
+# Ordenar alfabéticamente los archivos .data de la carpeta
+for ARCHIVO in "$ORIGEN"/*.data "$ORIGEN"/*.DATA
+do
+    # Si no hay archivos que coincidan, continuar
+    [ -f "$ARCHIVO" ] || continue
+
+    NOMBRE_ARCHIVO=${ARCHIVO##*/}
+    NOMBRE_BASE=${NOMBRE_ARCHIVO%.*}
+
+    # Identificar el departamento
+    DEPARTAMENTO=""
+
+    for DEP in $DEPARTAMENTOS
+    do
+        case "$NOMBRE_BASE" in
+            *"$DEP"*)
+                if [ -n "$DEPARTAMENTO" ]; then
+                    DEPARTAMENTO=""
+                    break
+                fi
+                DEPARTAMENTO=$DEP
+                ;;
+        esac
+    done
+
+    if [ -z "$DEPARTAMENTO" ]; then
+        echo "[OMITIDO] Departamento no identificado: $NOMBRE_ARCHIVO"
+        OMITIDOS=$((OMITIDOS + 1))
+        continue
+    fi
+
+    # Eliminar numeros
+    NOMBRE_LIMPIO=$(printf '%s' "$NOMBRE_BASE" |
+        sed 's/[0-9]//g')
+
+    # Eliminar los codigos de departamento
+    for DEP in $DEPARTAMENTOS
+    do
+        NOMBRE_LIMPIO=$(printf '%s' "$NOMBRE_LIMPIO" |
+            sed "s/$DEP//g")
+    done
+
+    # Extraer nombre y apellido separados por _
+    NOMBRE_PERSONA=$(printf '%s\n' "$NOMBRE_LIMPIO" |
+        sed -n 's/^\([^_]*\)_\{1,\}\([^_]*\).*$/\1/p')
+
+    APELLIDO_PERSONA=$(printf '%s\n' "$NOMBRE_LIMPIO" |
+        sed -n 's/^\([^_]*\)_\{1,\}\([^_]*\).*$/\2/p')
+
+    # Eliminar guiones y guiones bajos sobrantes
+    NOMBRE_PERSONA=$(printf '%s' "$NOMBRE_PERSONA" |
+        sed 's/[-_]*$//; s/^[-_]*//')
+
+    APELLIDO_PERSONA=$(printf '%s' "$APELLIDO_PERSONA" |
+        sed 's/[-_]*$//; s/^[-_]*//')
+
+    if [ -z "$NOMBRE_PERSONA" ] || [ -z "$APELLIDO_PERSONA" ]; then
+        echo "[OMITIDO] Nombre o apellido no identificado: $NOMBRE_ARCHIVO"
+        OMITIDOS=$((OMITIDOS + 1))
+        continue
+    fi
+
+    # Construir el nombre de destino
+    NUEVO_NOMBRE="${NOMBRE_PERSONA}_${APELLIDO_PERSONA}.data"
+
+    # Crear la carpeta del departamento
+    CARPETA_DESTINO="$ORIGEN/$DEPARTAMENTO"
+
+    if ! mkdir -p "$CARPETA_DESTINO"; then
+        echo "[ERROR] No se pudo crear $CARPETA_DESTINO"
+        OMITIDOS=$((OMITIDOS + 1))
+        continue
+    fi
+
+    RUTA_DESTINO="$CARPETA_DESTINO/$NUEVO_NOMBRE"
+
+    # Evitar sobrescribir archivos existentes
+    if [ -e "$RUTA_DESTINO" ]; then
+        echo "[DUPLICADO] $NOMBRE_ARCHIVO"
+        echo "           Ya existe: $DEPARTAMENTO/$NUEVO_NOMBRE"
+        echo "           Se conserva el archivo de origen."
+        OMITIDOS=$((OMITIDOS + 1))
+        continue
+    fi
+
+    # Mover y renombrar el archivo
+    if mv "$ARCHIVO" "$RUTA_DESTINO"; then
+        echo "[OK] $NOMBRE_ARCHIVO -> $DEPARTAMENTO/$NUEVO_NOMBRE"
+        PROCESADOS=$((PROCESADOS + 1))
+    else
+        echo "[ERROR] No se pudo mover: $NOMBRE_ARCHIVO"
+        OMITIDOS=$((OMITIDOS + 1))
+    fi
+
+done
+
+echo ""
+echo "========== RESUMEN =========="
+echo "Archivos procesados: $PROCESADOS"
+echo "Archivos omitidos:   $OMITIDOS"
+echo "============================="
+echo ""
+echo "Revisa los archivos que permanecen en la carpeta de origen."
+
+
+###FIN SCRIPT
+
+
+
+
+
+
+
+
+
